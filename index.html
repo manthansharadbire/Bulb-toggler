@@ -11,10 +11,16 @@
 <h1>Weather Changer</h1>
 <img src="./images/main-image.jpg" alt="weather-image" id="main-image">
 <div class="btn-container">
-<button id="summer" class="btn">Summer</button>
-<button id="winter" class="btn">Winter</button>
-<button id="monsoon" class="btn">Monsoon</button>
+<button id="summer" class="btn" onclick="changeImage('./images/summer.jpg')">Summer</button>
+<button id="winter" class="btn" onclick="changeImage('./images/winter.jpg')">Winter</button>
+<button id="monsoon" class="btn" onclick="changeImage('./images/monsoon.jpg')">Monsoon</button>
 </div>
 </div>
+<script>
+    function changeImage(imageName){
+        const imageElement = document.getElementById('main-image');
+        imageElement.src = imageName;
+    }
+</script>
 </body>
 </html>
